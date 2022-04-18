@@ -7,8 +7,9 @@
     <side-menu :drawer="drawer" v-on:source-selected="setSource"></side-menu>
     <v-main>
       <v-container fluid>
-        <main-content v-if="errors.count === 0" :articles="articles"></main-content>
-        <unavailable-content v-else :errors="errors"/>
+        <unavailable-content v-if="errors.count > 0" :errors="errors"/>
+        <main-content v-else :articles="articles"></main-content>
+
       </v-container>
       <v-footer color="primary">
         <footer-content/>
