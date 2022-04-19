@@ -23,7 +23,7 @@
       <v-btn icon="mdi-google-plus" class="text-red"/>
       <v-btn icon="mdi-linkedin"    class="text-blue-darken-4"/>
       <v-spacer></v-spacer>
-      <v-btn small replace color="info" v-bind:href="article.url" target="_blank">Read More</v-btn>
+      <v-btn small replace color="info" v-bind:href="article.url" target="_blank">{{ $t('read-more') }}</v-btn>
     </v-card-actions>
   </v-card>
 </template>
