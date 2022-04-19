@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vuetify from '@vuetify/vite-plugin'
+import {vueI18n} from "@intlify/vite-plugin-vue-i18n/lib/index";
 
 const path = require('path')
 
@@ -12,6 +13,10 @@ export default defineConfig({
     vuetify({
       autoImport: true,
     }),
+      // Vue I18n setup
+      vueI18n({
+        include: path.resolve(__dirname, "@locales/**")
+      })
   ],
   define: { 'process.env': {} },
   resolve: {
